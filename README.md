@@ -1,4 +1,4 @@
-# AWS-EBS:
+# AWS-EBS/EFS:
 ===============================
 Part-1: Attach and Mount Extra EBS Volume to Linux EC2
 ===============================
@@ -124,3 +124,16 @@ ls -l
 # 1.txt
 # 2.py
 # 3.java
+--------------------------------------------------------EFS-------------------------------------------------------------------------------
+1,create 2 instances -AMI
+2,Create securitygroup name and add inbound rules 2NFS->SG of 2 instances.
+3,create efs with securitygroup in region
+
+sudo su
+sudo yum install -y amazon-efs-utils
+mkdir /22bd1a057u-efs
+mount /22bd1a057u-efs
+df -h
+echo "<h1>Hello</h1>" > File.html
+follow same in another same instance
+
